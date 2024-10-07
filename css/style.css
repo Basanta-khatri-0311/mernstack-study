@@ -65,7 +65,7 @@ button:hover{
     top: 50%;
 } */
 
-h1{
+/* h1{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -85,4 +85,37 @@ h1 span{
     border-radius: 10px;
     padding: 15px 30px;
 
+} */
+
+#parent{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.child{
+    height: 300px;
+    width: 300px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+#child1{
+    background-image: url(https://images.unsplash.com/photo-1727907142948-eda26928705b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#child2{
+    background-image: url(https://images.unsplash.com/photo-1727907146879-3e4e93abf2d7?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#child3{
+    background-image: url(https://images.unsplash.com/photo-1727162112362-7fa652112df9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
 }
