@@ -9,17 +9,9 @@ html, body{
     height: 100%;
 }
 
-h1{
-    color: rebeccapurple;
-    background-color: black;
-}
-
-h2{
-    color: red;
-    background-color: rgb(14, 12, 12);
-}
-
-h3{
-    color: blue;
-    background-color: rgb(32, 32, 32);
+div{
+    height: 300px;
+    width: 300px;
+    background-color: crimson
+    ;
 }
