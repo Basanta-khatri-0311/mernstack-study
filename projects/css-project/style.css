@@ -44,3 +44,62 @@ nav a{
     color: #000;
     text-decoration: none;
 }
+
+section{
+    padding: 60px 100px;
+}
+
+section .herotext1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.herotext1 h1{
+    font-size: 250px;
+    line-height: 230px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.herotext1 .video{
+    height: 100px;
+    width: 350px;
+    border-radius: 100px ;
+    background-image: url(https://plus.unsplash.com/premium_photo-1668708034279-ab8fa3a9e19b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* background-position: center; */
+    background-size: cover;
+    padding: 10px;
+}
+.video .play{
+    height: 100%;
+    width: 80px;
+    background-color: black;
+    border-radius: 100px;
+    border: 4px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play i{
+    color: white;
+    font-size: 50px;
+    
+}
+
+section .herotext2{
+    display: flex;
+    align-items: flex-end;
+    justify-content:space-between;
+}
+
+.herotext2 h1{
+    font-size: 200px;
+    text-transform: uppercase;
+}
+
+.herotext2 p{
+    font-size: 30px;
+    width: 700px;
+    text-transform: uppercase;
+}
