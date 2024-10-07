@@ -9,9 +9,12 @@ html, body{
     height: 100%;
 }
 
-div{
-    height: 300px;
-    width: 300px;
-    background-color: crimson
-    ;
+#box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin-left: 100px;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-top: 30px;
 }
