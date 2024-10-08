@@ -7,22 +7,38 @@
 // var promppttt = prompt("Name...")
 // console.log(promppttt)
 
-function walk(){
-    console.log("I am walking")
+// function walk(){
+//     console.log("I am walking")
+// }
+
+// function sing(){
+//     console.log("I am singing")
+// }
+
+// function dance(){
+//     console.log("I am Dancing")
+// }
+
+// function greet(name){
+//     console.log('Hello ', name)
+// }
+
+// var nam = prompt("What is your name")
+
+// greet(nam)
+
+function hi(){
+    console.log('Normal function')
 }
 
-function sing(){
-    console.log("I am singing")
+hi()
+
+var hi = function (){
+    console.log("1st order Function")
 }
 
-function dance(){
-    console.log("I am Dancing")
+hi()
+var arrow = ()=>{
+    console.log("I am arrow function")
 }
-
-function greet(name){
-    console.log('Hello ', name)
-}
-
-var nam = prompt("What is your name")
-
-greet(nam)
+arrow()
