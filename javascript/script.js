@@ -18,3 +18,11 @@ function sing(){
 function dance(){
     console.log("I am Dancing")
 }
+
+function greet(name){
+    console.log('Hello ', name)
+}
+
+var nam = prompt("What is your name")
+
+greet(nam)
