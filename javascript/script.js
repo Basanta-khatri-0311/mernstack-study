@@ -27,18 +27,23 @@
 
 // greet(nam)
 
-function hi(){
-    console.log('Normal function')
-}
+// function hi(){
+//     console.log('Normal function')
+// }
 
-hi()
+// hi()
 
-var hi = function (){
-    console.log("1st order Function")
-}
+// var hi = function (){
+//     console.log("1st order Function")
+// }
 
-hi()
-var arrow = ()=>{
-    console.log("I am arrow function")
-}
-arrow()
+// hi()
+// var arrow = ()=>{
+//     console.log("I am arrow function")
+// }
+// arrow()
+
+var array1 = [10,20,30,40,50]
+array1.push(60)
+array1.pop()
+console.log(array1)
