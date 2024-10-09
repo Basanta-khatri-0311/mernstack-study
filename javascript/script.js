@@ -43,12 +43,19 @@
 // }
 // arrow()
 
-var array1 = [10,20,30,40,50]
+// var array1 = [10,20,30,40,50]
 // array1.push(60)
 // array1.pop()
 // console.log(array1)
 
 
-array1.forEach((values)=>{
-    console.log('I am',values)
-})
+// array1.forEach((values)=>{
+//     console.log('I am',values)
+// })
+
+var obj ={
+    user: 'Basanta',
+    age: 22,
+}
+
+console.log(obj.age)    
