@@ -53,9 +53,35 @@
 //     console.log('I am',values)
 // })
 
-var obj ={
-    user: 'Basanta',
-    age: 22,
+// var user1 ={
+//     user: 'Basanta',
+//     age: 22,
+// }
+
+// console.log(user1.age)    
+
+// var obj1 ={
+//     model:'iphone',
+//     price: 70,
+//     color:'Blue'
+// }
+// var obj2 ={
+//     model:'google',
+//     price: 20,
+//     color:'red'
+// }
+// var obj3 ={
+//     model:'samsung',
+//     price: 50,
+//     color:'black'
+// }
+
+
+var user ={
+    userName: 'hii',
+    greeting: ()=>{
+        console.log("hello",user.userName)
+    }
 }
 
-console.log(obj.age)    
+user.greeting()
