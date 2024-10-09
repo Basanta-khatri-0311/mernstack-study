@@ -77,11 +77,20 @@
 // }
 
 
-var user ={
-    userName: 'hii',
-    greeting: ()=>{
-        console.log("hello",user.userName)
-    }
-}
+// var user ={
+//     userName: 'hii',
+//     greeting: ()=>{
+//         console.log("hello",user.userName)
+//     }
+// }
 
-user.greeting()
+// user.greeting()
+
+var arrayOfObject = [
+    {userName:'Basanta',age:11},
+    {userName:'khatri',age:11},
+    {userName:'aakash',age:21},
+    {userName:'ayush',age:11}
+]
+
+console.log(arrayOfObject[0].age)
