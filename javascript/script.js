@@ -86,11 +86,40 @@
 
 // user.greeting()
 
-var arrayOfObject = [
-    {userName:'Basanta',age:11},
-    {userName:'khatri',age:11},
-    {userName:'aakash',age:21},
-    {userName:'ayush',age:11}
-]
 
-console.log(arrayOfObject[0].age)
+// This is an array of object example
+// var arrayOfObject = [
+//     {userName:'Basanta',age:11},
+//     {userName:'khatri',age:11},
+//     {userName:'aakash',age:21},
+//     {userName:'ayush',age:11}
+// ]
+
+// console.log(arrayOfObject[0].age)
+
+
+
+// -----------------------------------------------------------------DOM--------------------------------------------------------------\\
+
+// DOM- Document Object Model
+
+// There are 4 pillars of DOM
+
+// 1.---Selection of an elment 
+var h1 = document.querySelector('h1')
+
+
+// 2.---Changing HTML
+h1.innerHTML = 'Changed'
+
+
+// 3.---Changing CSS
+h1.style.color = 'purple'
+h1.style.backgroundColor = 'grey'
+
+// 4.---Event Listener
+h1.addEventListener('mouseenter',()=>{
+    h1.style.backgroundColor = 'orange'
+    h1.style.fontFamily = 'monospace'
+})
+
