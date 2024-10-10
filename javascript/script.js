@@ -178,18 +178,22 @@
 
 
 // Small object representing a book
-const book = {
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    year: 1925,
-    genre: "Novel"
-};
+// const book = {
+//     title: "The Great Gatsby",
+//     author: "F. Scott Fitzgerald",
+//     year: 1925,
+//     genre: "Novel"
+// };
 
-const newObj = {...book}
-console.log(newObj)
+// const newObj = {...book}
+// console.log(newObj)
 
 
+function abcs(...rest){
+    console.log(rest)
+}
 
+abcs(1,2,3,4,5,6)
 
 
 
