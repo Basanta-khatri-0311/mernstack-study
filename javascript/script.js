@@ -220,18 +220,34 @@
 
 // console.log(filteredSearch)
 
-//
-const users = [
-    {name:'joe', age:13},
-    {name:'moe', age:14},
-    {name:'loe', age:15}
+//mapping users
+// const users = [
+//     {name:'joe', age:13},
+//     {name:'moe', age:14},
+//     {name:'loe', age:15}
+// ]
+
+// const value = users.map((user)=>{
+//     return user.name +" age is " + user.age
+// })
+
+//grouping and arrayof objects on the basaic of role
+const users =[
+    {name: 'Hellen', age: 24, role:'admin'},
+    {name: 'Ben', age: 28, role:'employee'},
+    {name: 'Nick', age: 32, role:'admin'},
 ]
 
-const value = users.map((user)=>{
-    return user.name +" age is " + user.age
+let obj = {}
+
+users.forEach((user)=>{
+    if(obj[user.role]){
+        obj[user.role].push(user)
+    }else{
+        obj[user.role]= [];
+        obj[user.role].push(user)
+    }
 })
-
-
 
 
 
