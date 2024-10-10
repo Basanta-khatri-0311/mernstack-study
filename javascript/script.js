@@ -195,13 +195,30 @@
 
 // abcs(1,2,3,4,5,6)
 // merging 2 different arrays into a single list
-const firstNmaes =[ 'Basanta','Ayush','Manoj','bhagwati']
-const lastNames  =[ 'Khatri', 'Thapa', 'Magar', 'Shrestha']
+// const firstNmaes =[ 'Basanta','Ayush','Manoj','bhagwati']
+// const lastNames  =[ 'Khatri', 'Thapa', 'Magar', 'Shrestha']
 
-const fullNames = [...firstNmaes, ...lastNames]
+// const fullNames = [...firstNmaes, ...lastNames]
 
-console.log(fullNames)
+// console.log(fullNames)
 
+
+//filtering the product on the basic of types
+const products =[
+    {name: 'laptop', price: 100000, types:'Electronic'},
+    {name: 'phone', price: 80000, types:'Electronic'},
+    {name: 'tablet', price: 50000, types:'Electronic'},
+    {name: 'monitor', price: 30000, types:'Electronic'}, 
+    {name: 'shirt', price: 1200, types:'Clothing'}, 
+    {name: 'pant', price: 2000, types:'Clothing'}, 
+    {name: 'shoes', price: 3000, types:'Clothing'}, 
+]
+
+const filteredSearch = products.filter((filtered)=>{
+    return filtered.types === 'Clothing'
+})
+
+console.log(filteredSearch)
 
 
 
