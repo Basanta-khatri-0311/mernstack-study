@@ -124,50 +124,77 @@
 // })
 
 
-// const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
 
 // names.forEach((value)=>{
-//     if(value!=='aayush')
-//     console.log(value)
+    //     if(value!=='aayush')
+    //     console.log(value)
 // })
 
 // let newArray = names.map((value)=>{
-//     return value + ' jii'
-// })
+    //     return value + ' jii'
+    // })
+    
+    // console.log(newArray)
 
-// console.log(newArray)
-
-// let newArray = names.filter((value)=>{
+    // let newArray = names.filter((value)=>{
 //     if(value.length > 5){
-//         return true
-//     }
-// })
+    //         return true
+    //     }
+    // })
+    
+    // console.log(newArray)
 
-// console.log(newArray)
+    // Detailed user object
+    // const user = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+//     age: 30,
+//     email: "john.doe@example.com",
+//     address: {
+    //         street: "123 Main St",
+    //         city: "Anytown",
+    //         state: "CA",
+    //         zipCode: "12345"
+    //     },
+    //     phoneNumber: "+1 (555) 123-4567",
+    //     isActive: true,
+    //     roles: ["user", "editor"],
+    //     preferences: {
+        //         theme: "dark",
+//         notifications: true,
+//         language: "en"
+//     },
+//     lastLogin: new Date(),
+//     profilePicture: "https://example.com/profile-pic.jpg"
+// };
 
-// Detailed user object
-const user = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 30,
-    email: "john.doe@example.com",
-    address: {
-        street: "123 Main St",
-        city: "Anytown",
-        state: "CA",
-        zipCode: "12345"
-    },
-    phoneNumber: "+1 (555) 123-4567",
-    isActive: true,
-    roles: ["user", "editor"],
-    preferences: {
-        theme: "dark",
-        notifications: true,
-        language: "en"
-    },
-    lastLogin: new Date(),
-    profilePicture: "https://example.com/profile-pic.jpg"
-};
+// let {zipCode} = user.address
+// let [first,second] = user.roles
 
-let {zipCode} = user.address
-let [first,second] = user.roles
+
+const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
+
+//spread and rest
+
+const copyArrays = [...names]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
