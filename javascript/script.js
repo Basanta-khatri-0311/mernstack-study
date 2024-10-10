@@ -131,8 +131,16 @@ const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
 //     console.log(value)
 // })
 
-let newArray = names.map((value)=>{
-    return value + ' jii'
+// let newArray = names.map((value)=>{
+//     return value + ' jii'
+// })
+
+// console.log(newArray)
+
+let newArray = names.filter((value)=>{
+    if(value.length > 5){
+        return true
+    }
 })
 
 console.log(newArray)
