@@ -106,16 +106,16 @@
 // There are 4 pillars of DOM
 
 // 1.---Selection of an elment 
-var h1 = document.querySelector('h1')
+// var h1 = document.querySelector('h1')
 
 
 // 2.---Changing HTML
-h1.innerHTML = 'Changed'
+// h1.innerHTML = 'Changed'
 
 
 // 3.---Changing CSS
-h1.style.color = 'purple'
-h1.style.backgroundColor = 'grey'
+// h1.style.color = 'purple'
+// h1.style.backgroundColor = 'grey'
 
 // 4.---Event Listener
 // h1.addEventListener('mouseenter',()=>{
@@ -124,7 +124,7 @@ h1.style.backgroundColor = 'grey'
 // })
 
 
-const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
+// const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
 
 // names.forEach((value)=>{
 //     if(value!=='aayush')
@@ -137,10 +137,37 @@ const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
 
 // console.log(newArray)
 
-let newArray = names.filter((value)=>{
-    if(value.length > 5){
-        return true
-    }
-})
+// let newArray = names.filter((value)=>{
+//     if(value.length > 5){
+//         return true
+//     }
+// })
 
-console.log(newArray)
+// console.log(newArray)
+
+// Detailed user object
+const user = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    email: "john.doe@example.com",
+    address: {
+        street: "123 Main St",
+        city: "Anytown",
+        state: "CA",
+        zipCode: "12345"
+    },
+    phoneNumber: "+1 (555) 123-4567",
+    isActive: true,
+    roles: ["user", "editor"],
+    preferences: {
+        theme: "dark",
+        notifications: true,
+        language: "en"
+    },
+    lastLogin: new Date(),
+    profilePicture: "https://example.com/profile-pic.jpg"
+};
+
+let {zipCode} = user.address
+let [first,second] = user.roles
