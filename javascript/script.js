@@ -189,13 +189,18 @@
 // console.log(newObj)
 
 
-function abcs(...rest){
-    console.log(rest)
-}
+// function abcs(...rest){
+//     console.log(rest)
+// }
 
-abcs(1,2,3,4,5,6)
+// abcs(1,2,3,4,5,6)
+// merging 2 different arrays into a single list
+const firstNmaes =[ 'Basanta','Ayush','Manoj','bhagwati']
+const lastNames  =[ 'Khatri', 'Thapa', 'Magar', 'Shrestha']
 
+const fullNames = [...firstNmaes, ...lastNames]
 
+console.log(fullNames)
 
 
 
