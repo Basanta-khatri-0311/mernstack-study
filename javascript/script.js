@@ -118,8 +118,15 @@ h1.style.color = 'purple'
 h1.style.backgroundColor = 'grey'
 
 // 4.---Event Listener
-h1.addEventListener('mouseenter',()=>{
-    h1.style.backgroundColor = 'orange'
-    h1.style.fontFamily = 'monospace'
-})
+// h1.addEventListener('mouseenter',()=>{
+//     h1.style.backgroundColor = 'orange'
+//     h1.style.fontFamily = 'monospace'
+// })
 
+
+const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
+
+names.forEach((value)=>{
+    if(value!=='aayush')
+    console.log(value)
+})
