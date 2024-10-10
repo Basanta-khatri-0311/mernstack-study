@@ -126,7 +126,13 @@ h1.style.backgroundColor = 'grey'
 
 const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
 
-names.forEach((value)=>{
-    if(value!=='aayush')
-    console.log(value)
+// names.forEach((value)=>{
+//     if(value!=='aayush')
+//     console.log(value)
+// })
+
+let newArray = names.map((value)=>{
+    return value + ' jii'
 })
+
+console.log(newArray)
