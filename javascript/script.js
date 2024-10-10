@@ -172,11 +172,22 @@
 // let [first,second] = user.roles
 
 
-const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
-
 //spread and rest
+// const names =[ 'Basanta', 'Khatri', 'aakash', 'aayush','saroj']
+// const copyArrays = [...names]
 
-const copyArrays = [...names]
+
+// Small object representing a book
+const book = {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    year: 1925,
+    genre: "Novel"
+};
+
+const newObj = {...book}
+console.log(newObj)
+
 
 
 
