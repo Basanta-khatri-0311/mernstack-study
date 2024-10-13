@@ -2,6 +2,8 @@
 //   return <h1>Hello</h1>
 // }
 
+import { useState } from "react";
+
 // export default app
 
 // function app() {
@@ -11,10 +13,14 @@
 // export default app;
 
 function userDetails(){
-  const user = 'Basanta'
+  const [user, setUSER] = useState('Basanta')
+  const changeName =()=>{
+    setUSER('Khatri')
+  }
   return(
     <div>
       <h1>Hello {user}</h1>
+      <button onClick={changeName}>change user</button>
     </div>
   )
 }
