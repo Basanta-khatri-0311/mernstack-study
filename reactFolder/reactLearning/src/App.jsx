@@ -40,3 +40,15 @@ import { useState } from "react";
 
 // export default counter;
 
+function calling(){
+    const[value,setValue] = useState('Click the button below to start voice maxing')
+    return (
+        <div>
+            <h1>{value}</h1>
+            <button onClick={()=>setValue(' voice maxing started')}>Change Text</button>
+        </div>
+    )
+}
+
+export default calling;
+
