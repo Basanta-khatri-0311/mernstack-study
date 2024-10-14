@@ -14,9 +14,26 @@ body{
   background-color: #111;
 }
 
+.first{
+  width: 100%;
+}
+.second{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
 button{
-  padding: 5px 10px;
+  background-color: royalblue;
+  padding: 10px 25px;
+  font-size: 22px;
+  font-family: monospace;
+  text-transform:uppercase;
   text-align: center;
-  color: purple;
+  color:#fff;
   cursor: pointer;
+}
+.heading{
+  text-align: center;
+  margin-top: 5%;
 }

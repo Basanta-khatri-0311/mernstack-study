@@ -43,9 +43,11 @@ import { useState } from "react";
 function calling(){
     const[value,setValue] = useState('Click the button below to start voice maxing')
     return (
-        <div>
-            <h1>{value}</h1>
+        <div className="first">
+            <h1 className="heading">{value}</h1>
+            <div className="second">
             <button onClick={()=>setValue(' voice maxing started')}>Change Text</button>
+            </div>
         </div>
     )
 }
