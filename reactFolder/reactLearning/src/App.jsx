@@ -55,15 +55,60 @@ import { useState } from "react";
 // export default calling;
 //form handeling in react 
 
-function formss(){
-    return(
+// function formss(){
+//     const submitHandler = (e)=>{
+//         e.preventDefault()
+//         console.log('submite',e)
+//     }
+//     return(
+//         <div>
+//             <form onSubmit={(e)=>{
+//                 submitHandler(e)
+//             }}>
+//                 <input className="px-4 py-3 text-xl m-5 rounded" type="text" name="" id="" placeholder="username" />
+//                 <button className="px-4 py-3 m-5 text-xl text-white font-semibold bg-emerald-500 rounded">submit</button>
+//             </form>
+//         </div>
+//     )
+// }
+
+// export default formss;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function faram(){
+
+    const handeler =(e)=>{
+        e.preventDefault()
+        console.log(e)
+    }
+    return (
         <div>
-            <form >
-                <input className="" type="text" name="" id="" placeholder="username" />
-                <button>submit</button>
+            <form onSubmit={(e)=>{
+                handeler(e)
+            }}>
+                <input className="px-4 py-3 m-5 font-semibold rounded" type="text" placeholder="username" />
+                <button className="px-4 py-3 m-5 rounded text-white bg-emerald-600"> submit </button>
             </form>
         </div>
     )
 }
 
-export default formss;
+
+
+
+
+
+export default faram ;
