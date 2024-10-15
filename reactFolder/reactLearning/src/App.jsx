@@ -40,17 +40,30 @@ import { useState } from "react";
 
 // export default counter;
 
-function calling(){
-    const[value,setValue] = useState('Click the button below to start voice maxing')
-    return (
-        <div className="first">
-            <h1 className="heading">{value}</h1>
-            <div className="second">
-            <button onClick={()=>setValue(' voice maxing started')}>Change Text</button>
-            </div>
+// function calling(){
+//     const[value,setValue] = useState('Click the button below to start voice maxing')
+//     return (
+//         <div className="first">
+//             <h1 className="heading">{value}</h1>
+//             <div className="second">
+//             <button onClick={()=>setValue(' voice maxing started')}>Change Text</button>
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default calling;
+//form handeling in react 
+
+function formss(){
+    return(
+        <div>
+            <form >
+                <input className="" type="text" name="" id="" placeholder="username" />
+                <button>submit</button>
+            </form>
         </div>
     )
 }
 
-export default calling;
-
+export default formss;
