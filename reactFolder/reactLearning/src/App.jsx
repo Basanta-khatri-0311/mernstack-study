@@ -88,27 +88,106 @@ import { useState } from "react";
 
 
 
-function faram(){
+// function faram(){
+//     const [username, setUsername] = useState('')
+//     const handeler =(e)=>{
+//         e.preventDefault()
+//         console.log(username)
+//         setUsername('')
+//     }
+//     return (
+//         <div>
+//             <form onSubmit={(e)=>{
+//                 handeler(e)
+//             }}>
+//                 <input 
+//                 value={username}
+//                 onChange={(e)=>{
+//                     setUsername(e.target.value)
+//                 }}
+//                 className="px-4 py-3 m-5 font-semibold rounded" type="text" placeholder="username" />
+//                 <button className="px-4 py-3 m-5 rounded text-white bg-emerald-600"> submit </button>
+//             </form>
+//         </div>
+//     )
+// }
+// export default faram ;
 
-    const handeler =(e)=>{
+
+
+// function aafai(){
+//     const [username, setUsername] = useState('')
+
+//     const handeler = (e)=>{
+//         e.preventDefault()
+//         console.log(username)
+//         setUsername('')
+//     }
+//     return(
+//         <div>
+//             <form onSubmit={(e)=>{
+//                 handeler(e)
+//             }}>
+//                 <input 
+//                 value={username}
+//                 onChange={(e)=>{
+//                     setUsername(e.target.value)
+//                 }}
+//                 className="px-4 py-3 m-5 rounded" type="text" placeholder="username"/>
+//                 <button className="px-4 py-3 m-5 rounded bg-emerald-700">submit</button>
+//             </form>
+//         </div>
+//     )
+// }
+
+// export default aafai;
+
+
+
+function last(){
+
+    const [username,setUsername] = useState('')
+
+    const eventHandeller = (e)=>{
         e.preventDefault()
-        console.log(e)
+        console.log(username)
+        setUsername('')
     }
-    return (
+
+
+
+    return(
         <div>
-            <form onSubmit={(e)=>{
-                handeler(e)
+            <form  onSubmit={(e)=>{
+                eventHandeller(e)
             }}>
-                <input className="px-4 py-3 m-5 font-semibold rounded" type="text" placeholder="username" />
-                <button className="px-4 py-3 m-5 rounded text-white bg-emerald-600"> submit </button>
+                <input  
+                value={username}
+                onChange={(e)=>{
+                    setUsername(e.target.value)
+                }}
+                className="px=4 py-3 m-5 rounded bg-white " type="text" name="" id="" placeholder="UserName" />
+                <button className="px-4 py-3 m-5 rounded bg-emerald-600">Submit</button>
             </form>
         </div>
     )
 }
 
+export default last;
 
 
 
 
 
-export default faram ;
+
+
+
+
+
+
+
+
+
+
+
+
