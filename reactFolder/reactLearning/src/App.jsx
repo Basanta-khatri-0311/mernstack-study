@@ -166,7 +166,7 @@ function last(){
                 onChange={(e)=>{
                     setUsername(e.target.value)
                 }}
-                className="px=4 py-3 m-5 rounded bg-white " type="text" name="" id="" placeholder="UserName" />
+                className="px-4 py-3 m-5 rounded bg-white " type="text" name="" id="" placeholder="UserName" />
                 <button className="px-4 py-3 m-5 rounded bg-emerald-600">Submit</button>
             </form>
         </div>
