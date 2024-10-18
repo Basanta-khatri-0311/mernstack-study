@@ -144,36 +144,82 @@ import { useState } from "react";
 
 
 
-function last(){
+// function last(){
 
-    const [username,setUsername] = useState('')
+//     const [username,setUsername] = useState('')
 
-    const eventHandeller = (e)=>{
+//     const eventHandeller = (e)=>{
+//         e.preventDefault()
+//         console.log(username)
+//         setUsername('')
+//     }
+
+
+
+//     return(
+//         <div>
+//             <form  onSubmit={(e)=>{
+//                 eventHandeller(e)
+//             }}>
+//                 <input  
+//                 value={username}
+//                 onChange={(e)=>{
+//                     setUsername(e.target.value)
+//                 }}
+//                 className="px-4 py-3 m-5 rounded bg-white " type="text" name="" id="" placeholder="UserName" />
+//                 <button className="px-4 py-3 m-5 rounded bg-emerald-600">Submit</button>
+//             </form>
+//         </div>
+//     )
+// }
+
+// export default last;
+
+
+
+
+
+function final(){
+
+    const [userName, setUserName] = useState('')
+
+    const handeller = (e)=>{
         e.preventDefault()
-        console.log(username)
-        setUsername('')
+        console.log(userName)
+        setUserName('')
     }
-
-
-
     return(
         <div>
-            <form  onSubmit={(e)=>{
-                eventHandeller(e)
-            }}>
-                <input  
-                value={username}
+            <form onSubmit={(e)=>{
+                handeller(e)
+            }} >
+                <input 
+                value={userName}
                 onChange={(e)=>{
-                    setUsername(e.target.value)
+                    setUserName(e.target.value)
                 }}
-                className="px-4 py-3 m-5 rounded bg-white " type="text" name="" id="" placeholder="UserName" />
-                <button className="px-4 py-3 m-5 rounded bg-emerald-600">Submit</button>
-            </form>
+                className="px-4 py-3 m-5 rounded " type="text" name="" id="" placeholder="UserName" />
+                <button className="px-4 py-3 m-5 rounded bg-emerald-600 text-white ">Submit</button>
+            </form> bg-emerald-600 text-white
         </div>
     )
 }
 
-export default last;
+export default final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
