@@ -179,33 +179,65 @@ import { useState } from "react";
 
 
 
-function final(){
+// function final(){
 
-    const [userName, setUserName] = useState('')
+//     const [userName, setUserName] = useState('')
 
-    const handeller = (e)=>{
-        e.preventDefault()
-        console.log(userName)
-        setUserName('')
-    }
-    return(
-        <div>
-            <form onSubmit={(e)=>{
-                handeller(e)
-            }} >
-                <input 
-                value={userName}
-                onChange={(e)=>{
-                    setUserName(e.target.value)
-                }}
-                className="px-4 py-3 m-5 rounded " type="text" name="" id="" placeholder="UserName" />
-                <button className="px-4 py-3 m-5 rounded bg-emerald-600 text-white ">Submit</button>
-            </form> bg-emerald-600 text-white
-        </div>
-    )
-}
+//     const handeller = (e)=>{
+//         e.preventDefault()
+//         console.log(userName)
+//         setUserName('')
+//     }
+//     return(
+//         <div>
+//             <form onSubmit={(e)=>{
+//                 handeller(e)
+//             }} >
+//                 <input 
+//                 value={userName}
+//                 onChange={(e)=>{
+//                     setUserName(e.target.value)
+//                 }}
+//                 className="px-4 py-3 m-5 rounded " type="text" name="" id="" placeholder="UserName" />
+//                 <button className="px-4 py-3 m-5 rounded bg-emerald-600 text-white ">Submit</button>
+//             </form> bg-emerald-600 text-white
+//         </div>
+//     )
+// }
 
-export default final
+// export default final
+
+
+
+
+
+// function  last(){
+//     const [user,setUser] = useState('')
+//     const handeler = (e)=>{
+//         e.preventDefault()
+//         console.log(user)
+//         setUser('')
+//     }
+//     return(
+//         <div>
+//             <form onSubmit={(e)=>{
+//                 handeler(e)
+//             }}>
+//                 <input 
+//                 value={user}
+//                 onChange={(e)=>{
+//                     setUser(e.target.value)
+//                 }}
+//                 type="text" name="" id="" placeholder="username" />
+//                 <button>Submit</button>
+//             </form>
+//         </div>
+//     )
+// }
+
+// export default last
+
+
 
 
 
