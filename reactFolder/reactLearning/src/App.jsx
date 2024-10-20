@@ -53,7 +53,7 @@ import { useState } from "react";
 // }
 
 // export default calling;
-//form handeling in react 
+//form handeling in react
 
 // function formss(){
 //     const submitHandler = (e)=>{
@@ -74,20 +74,6 @@ import { useState } from "react";
 
 // export default formss;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function faram(){
 //     const [username, setUsername] = useState('')
 //     const handeler =(e)=>{
@@ -100,7 +86,7 @@ import { useState } from "react";
 //             <form onSubmit={(e)=>{
 //                 handeler(e)
 //             }}>
-//                 <input 
+//                 <input
 //                 value={username}
 //                 onChange={(e)=>{
 //                     setUsername(e.target.value)
@@ -112,8 +98,6 @@ import { useState } from "react";
 //     )
 // }
 // export default faram ;
-
-
 
 // function aafai(){
 //     const [username, setUsername] = useState('')
@@ -128,7 +112,7 @@ import { useState } from "react";
 //             <form onSubmit={(e)=>{
 //                 handeler(e)
 //             }}>
-//                 <input 
+//                 <input
 //                 value={username}
 //                 onChange={(e)=>{
 //                     setUsername(e.target.value)
@@ -142,8 +126,6 @@ import { useState } from "react";
 
 // export default aafai;
 
-
-
 // function last(){
 
 //     const [username,setUsername] = useState('')
@@ -154,14 +136,12 @@ import { useState } from "react";
 //         setUsername('')
 //     }
 
-
-
 //     return(
 //         <div>
 //             <form  onSubmit={(e)=>{
 //                 eventHandeller(e)
 //             }}>
-//                 <input  
+//                 <input
 //                 value={username}
 //                 onChange={(e)=>{
 //                     setUsername(e.target.value)
@@ -174,10 +154,6 @@ import { useState } from "react";
 // }
 
 // export default last;
-
-
-
-
 
 // function final(){
 
@@ -193,7 +169,7 @@ import { useState } from "react";
 //             <form onSubmit={(e)=>{
 //                 handeller(e)
 //             }} >
-//                 <input 
+//                 <input
 //                 value={userName}
 //                 onChange={(e)=>{
 //                     setUserName(e.target.value)
@@ -207,10 +183,6 @@ import { useState } from "react";
 
 // export default final
 
-
-
-
-
 // function  last(){
 //     const [user,setUser] = useState('')
 //     const handeler = (e)=>{
@@ -223,7 +195,7 @@ import { useState } from "react";
 //             <form onSubmit={(e)=>{
 //                 handeler(e)
 //             }}>
-//                 <input 
+//                 <input
 //                 value={user}
 //                 onChange={(e)=>{
 //                     setUser(e.target.value)
@@ -238,34 +210,31 @@ import { useState } from "react";
 // export default last
 
 
+function last(){
 
+    const [user, setUser] = useState('')
 
+    const handel =(e)=>{
+        e.preventDefault()
+        console.log(user)
+        setUser('')
+    }
+    return(
+        <div>
+        <form onSubmit={(e)=>{
+            handel(e)
+        }}>
+            <input
+            value={user}
+            onChange={(e)=>{
+                setUser(e.target.value)
+            }}
+            className="px-4 py-3 m-5 rounded" 
+            type="text" name="" id="" placeholder="User-Name" />
+            <button className="px-4 py-3 m-5 rounded bg-emerald-800 text-white">Submit</button>
+        </form>
+        </div>
+    )
+} 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default last;
