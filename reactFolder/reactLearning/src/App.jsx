@@ -210,31 +210,50 @@ import { useState } from "react";
 // export default last
 
 
-function last(){
+// function last(){
 
-    const [user, setUser] = useState('')
+//     const [user, setUser] = useState('')
 
-    const handel =(e)=>{
-        e.preventDefault()
-        console.log(user)
-        setUser('')
-    }
+//     const handel =(e)=>{
+//         e.preventDefault()
+//         console.log(user)
+//         setUser('')
+//     }
+//     return(
+//         <div>
+//         <form onSubmit={(e)=>{
+//             handel(e)
+//         }}>
+//             <input
+//             value={user}
+//             onChange={(e)=>{
+//                 setUser(e.target.value)
+//             }}
+//             className="px-4 py-3 m-5 rounded" 
+//             type="text" name="" id="" placeholder="User-Name" />
+//             <button className="px-4 py-3 m-5 rounded bg-emerald-800 text-white">Submit</button>
+//         </form>
+//         </div>
+//     )
+// } 
+
+// export default last;
+
+
+function App(){
     return(
-        <div>
-        <form onSubmit={(e)=>{
-            handel(e)
-        }}>
-            <input
-            value={user}
-            onChange={(e)=>{
-                setUser(e.target.value)
-            }}
-            className="px-4 py-3 m-5 rounded" 
-            type="text" name="" id="" placeholder="User-Name" />
-            <button className="px-4 py-3 m-5 rounded bg-emerald-800 text-white">Submit</button>
-        </form>
-        </div>
+        <>
+        <nav className="py-5 px-10 bg-emerald-950 flex items-center justify-between">
+            <h1 className="text-2xl">Hello Logo</h1>
+            <div className="flex gap-10 items-center justify-between ">
+                <h4 className="text-xl">Home</h4>
+                <h4 className="text-xl">About</h4>
+                <h4 className="text-xl">Services</h4>
+                <h4 className="text-xl">Account Setting</h4>
+            </div>
+        </nav>
+        </>
     )
-} 
+}
 
-export default last;
+export default App
