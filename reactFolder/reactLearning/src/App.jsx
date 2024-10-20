@@ -2,7 +2,9 @@
 //   return <h1>Hello</h1>
 // }
 
-import { useState } from "react";
+// import { useState } from "react";
+import React from "react";
+import Header from './components/HEADER.JSX';
 
 // export default app
 
@@ -243,6 +245,7 @@ import { useState } from "react";
 function App(){
     return(
         <>
+        <Header/>
         <nav className="py-5 px-10 bg-emerald-950 flex items-center justify-between">
             <h1 className="text-2xl">Hello Logo</h1>
             <div className="flex gap-10 items-center justify-between ">
