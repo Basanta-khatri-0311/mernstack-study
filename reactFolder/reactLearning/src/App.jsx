@@ -2,9 +2,7 @@
 //   return <h1>Hello</h1>
 // }
 
-// import { useState } from "react";
-import React from "react";
-import Header from './components/HEADER.JSX';
+import { useState } from "react";
 
 // export default app
 
@@ -243,20 +241,30 @@ import Header from './components/HEADER.JSX';
 
 
 function App(){
+
+    const [username, setUsername] = useState('')
+
+    const handeler =(e)=>{
+        e.preventDefault()
+        setUsername('')
+        console.log(username)
+    }
     return(
-        <>
-        <Header/>
-        <nav className="py-5 px-10 bg-emerald-950 flex items-center justify-between">
-            <h1 className="text-2xl">Hello Logo</h1>
-            <div className="flex gap-10 items-center justify-between ">
-                <h4 className="text-xl">Home</h4>
-                <h4 className="text-xl">About</h4>
-                <h4 className="text-xl">Services</h4>
-                <h4 className="text-xl">Account Setting</h4>
-            </div>
-        </nav>
-        </>
+        <div>
+            <form onSubmit={(e)=>{
+                handeler(e)
+            }}>
+                <input
+                value={username}
+                onChange={(e)=>{
+                    setUsername(e.target.value)
+                }}
+                className="px-4 py-3 m-10 rounded text-xl text-black" 
+                type="text" name="" id="" placeholder="User-Name" />
+                <button className="px-4 py-3 m-10 rounded bg-emerald-900 text-xl">Submit</button>
+            </form>
+        </div>
     )
 }
 
-export default App
+export default App;
