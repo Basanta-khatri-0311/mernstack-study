@@ -3,6 +3,7 @@
 // }
 
 import { useState } from "react";
+import Header from "./components/Header"
 
 // export default app
 
@@ -240,31 +241,50 @@ import { useState } from "react";
 // export default last;
 
 
+// function App(){
+
+//     const [username, setUsername] = useState('')
+
+//     const handeler =(e)=>{
+//         e.preventDefault()
+//         setUsername('')
+//         console.log(username)
+//     }
+//     return(
+//         <div>
+//             <form onSubmit={(e)=>{
+//                 handeler(e)
+//             }}>
+//                 <input
+//                 value={username}
+//                 onChange={(e)=>{
+//                     setUsername(e.target.value)
+//                 }}
+//                 className="px-4 py-3 m-10 rounded text-xl text-black" 
+//                 type="text" name="" id="" placeholder="User-Name" />
+//                 <button className="px-4 py-3 m-10 rounded bg-emerald-900 text-xl">Submit</button>
+//             </form>
+//         </div>
+//     )
+// }
+
+// export default App;
+
 function App(){
-
-    const [username, setUsername] = useState('')
-
-    const handeler =(e)=>{
-        e.preventDefault()
-        setUsername('')
-        console.log(username)
-    }
     return(
-        <div>
-            <form onSubmit={(e)=>{
-                handeler(e)
-            }}>
-                <input
-                value={username}
-                onChange={(e)=>{
-                    setUsername(e.target.value)
-                }}
-                className="px-4 py-3 m-10 rounded text-xl text-black" 
-                type="text" name="" id="" placeholder="User-Name" />
-                <button className="px-4 py-3 m-10 rounded bg-emerald-900 text-xl">Submit</button>
-            </form>
-        </div>
+        <>
+        <Header/>
+        <nav className="bg-emerald-950 flex py-5 px-10 items-center justify-between">
+            <h2 className="text-2xl">Logo-Here</h2>
+            <div className="flex gap-8 items-center">
+                <h4 className="text-xl">Home</h4>
+                <h4 className="text-xl">About</h4>
+                <h4 className="text-xl">Contact</h4>
+                <h4 className="text-xl">Services</h4>
+            </div>
+        </nav>
+        </>
     )
 }
 
-export default App;
+export default App
