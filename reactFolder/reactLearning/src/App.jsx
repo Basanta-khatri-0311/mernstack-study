@@ -2,7 +2,8 @@
 //   return <h1>Hello</h1>
 // }
 
-import { useState } from "react";
+// import { useState } from "react";
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 
 // export default app
@@ -270,19 +271,12 @@ import Header from "./components/Header"
 
 // export default App;
 
+
 function App(){
-    return(
+    return (
         <>
-        <Header/>
-        <nav className="bg-emerald-950 flex py-5 px-10 items-center justify-between">
-            <h2 className="text-2xl">Logo-Here</h2>
-            <div className="flex gap-8 items-center">
-                <h4 className="text-xl">Home</h4>
-                <h4 className="text-xl">About</h4>
-                <h4 className="text-xl">Contact</h4>
-                <h4 className="text-xl">Services</h4>
-            </div>
-        </nav>
+        <Header />
+        <Footer />
         </>
     )
 }
