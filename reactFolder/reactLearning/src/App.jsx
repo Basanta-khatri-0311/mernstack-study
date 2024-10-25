@@ -2,9 +2,12 @@
 //   return <h1>Hello</h1>
 // }
 
+import Caard from "./components/Caard";
+
 // import { useState } from "react";
-import Footer from "./components/Footer"
-import Header from "./components/Header"
+// import Footer from "./components/Footer"
+// import Header from "./components/Header"
+// import Card from "./components/Card"
 
 // export default app
 
@@ -211,7 +214,6 @@ import Header from "./components/Header"
 
 // export default last
 
-
 // function last(){
 
 //     const [user, setUser] = useState('')
@@ -231,16 +233,15 @@ import Header from "./components/Header"
 //             onChange={(e)=>{
 //                 setUser(e.target.value)
 //             }}
-//             className="px-4 py-3 m-5 rounded" 
+//             className="px-4 py-3 m-5 rounded"
 //             type="text" name="" id="" placeholder="User-Name" />
 //             <button className="px-4 py-3 m-5 rounded bg-emerald-800 text-white">Submit</button>
 //         </form>
 //         </div>
 //     )
-// } 
+// }
 
 // export default last;
-
 
 // function App(){
 
@@ -261,7 +262,7 @@ import Header from "./components/Header"
 //                 onChange={(e)=>{
 //                     setUsername(e.target.value)
 //                 }}
-//                 className="px-4 py-3 m-10 rounded text-xl text-black" 
+//                 className="px-4 py-3 m-10 rounded text-xl text-black"
 //                 type="text" name="" id="" placeholder="User-Name" />
 //                 <button className="px-4 py-3 m-10 rounded bg-emerald-900 text-xl">Submit</button>
 //             </form>
@@ -271,14 +272,42 @@ import Header from "./components/Header"
 
 // export default App;
 
+// function App(){
+//     return (
+//         <>
+//         <Header />
+//         <Footer />
+//         </>
+//     )
+// }
 
-function App(){
-    return (
-        <>
-        <Header />
-        <Footer />
-        </>
-    )
-}
+// export default App
+// import Card from "./components/Card"
 
-export default App
+const App = () => {
+    const usersData = [
+        { name: "John", surname: "Doe", city: "New York", age: 28, image: "https://example.com/john.jpg" },
+        { name: "Emma", surname: "Smith", city: "London", age: 32, image: "https://example.com/emma.jpg" },
+        { name: "Michael", surname: "Johnson", city: "Los Angeles", age: 45, image: "https://example.com/michael.jpg" },
+        { name: "Sophia", surname: "Brown", city: "Paris", age: 29, image: "https://example.com/sophia.jpg" },
+        { name: "William", surname: "Taylor", city: "Sydney", age: 37, image: "https://example.com/william.jpg" },
+        { name: "Olivia", surname: "Anderson", city: "Toronto", age: 26, image: "https://example.com/olivia.jpg" },
+        { name: "James", surname: "Wilson", city: "Chicago", age: 41, image: "https://example.com/james.jpg" },
+        { name: "Ava", surname: "Martinez", city: "Berlin", age: 33, image: "https://example.com/ava.jpg" },
+        { name: "Daniel", surname: "Garcia", city: "Madrid", age: 39, image: "https://example.com/daniel.jpg" },
+        { name: "Mia", surname: "Lee", city: "Tokyo", age: 31, image: "https://example.com/mia.jpg" }
+      ];
+  return (
+    <div>
+      <div className="p-10">
+        {usersData.map((user,idx)=>{
+            return(
+                <Caard key={idx} username={user.name} surname={user.surname} city={user.city} age={user.age} photo={user.image}/>
+            )
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default App;
