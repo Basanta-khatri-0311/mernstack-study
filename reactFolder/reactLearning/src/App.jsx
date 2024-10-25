@@ -2,7 +2,8 @@
 //   return <h1>Hello</h1>
 // }
 
-import Caard from "./components/Caard";
+// import Caard from "./components/Caard";
+import Ex from "./components/Ex";
 
 // import { useState } from "react";
 // import Footer from "./components/Footer"
@@ -284,30 +285,39 @@ import Caard from "./components/Caard";
 // export default App
 // import Card from "./components/Card"
 
-const App = () => {
-    const usersData = [
-        { name: "John", surname: "Doe", city: "New York", age: 28, image: "https://example.com/john.jpg" },
-        { name: "Emma", surname: "Smith", city: "London", age: 32, image: "https://example.com/emma.jpg" },
-        { name: "Michael", surname: "Johnson", city: "Los Angeles", age: 45, image: "https://example.com/michael.jpg" },
-        { name: "Sophia", surname: "Brown", city: "Paris", age: 29, image: "https://example.com/sophia.jpg" },
-        { name: "William", surname: "Taylor", city: "Sydney", age: 37, image: "https://example.com/william.jpg" },
-        { name: "Olivia", surname: "Anderson", city: "Toronto", age: 26, image: "https://example.com/olivia.jpg" },
-        { name: "James", surname: "Wilson", city: "Chicago", age: 41, image: "https://example.com/james.jpg" },
-        { name: "Ava", surname: "Martinez", city: "Berlin", age: 33, image: "https://example.com/ava.jpg" },
-        { name: "Daniel", surname: "Garcia", city: "Madrid", age: 39, image: "https://example.com/daniel.jpg" },
-        { name: "Mia", surname: "Lee", city: "Tokyo", age: 31, image: "https://example.com/mia.jpg" }
-      ];
-  return (
-    <div>
-      <div className="p-10">
-        {usersData.map((user,idx)=>{
-            return(
-                <Caard key={idx} username={user.name} surname={user.surname} city={user.city} age={user.age} photo={user.image}/>
-            )
-        })}
-      </div>
-    </div>
-  );
-};
+// const App = () => {
+//     const usersData = [
+//         { name: "John", surname: "Doe", city: "New York", age: 28, image: "https://example.com/john.jpg" },
+//         { name: "Emma", surname: "Smith", city: "London", age: 32, image: "https://example.com/emma.jpg" },
+//         { name: "Michael", surname: "Johnson", city: "Los Angeles", age: 45, image: "https://example.com/michael.jpg" },
+//         { name: "Sophia", surname: "Brown", city: "Paris", age: 29, image: "https://example.com/sophia.jpg" },
+//         { name: "William", surname: "Taylor", city: "Sydney", age: 37, image: "https://example.com/william.jpg" },
+//         { name: "Olivia", surname: "Anderson", city: "Toronto", age: 26, image: "https://example.com/olivia.jpg" },
+//         { name: "James", surname: "Wilson", city: "Chicago", age: 41, image: "https://example.com/james.jpg" },
+//         { name: "Ava", surname: "Martinez", city: "Berlin", age: 33, image: "https://example.com/ava.jpg" },
+//         { name: "Daniel", surname: "Garcia", city: "Madrid", age: 39, image: "https://example.com/daniel.jpg" },
+//         { name: "Mia", surname: "Lee", city: "Tokyo", age: 31, image: "https://example.com/mia.jpg" }
+//       ];
+//   return (
+//     <div>
+//       <div className="p-10">
+//         {usersData.map((user,idx)=>{
+//             return(
+//                 <Caard key={idx} username={user.name} surname={user.surname} city={user.city} age={user.age} photo={user.image}/>
+//             )
+//         })}
+//       </div>
+//     </div>
+//   );
+// };
 
-export default App;
+// export default App;
+
+
+const SecondApp = ()=>{
+    const value = "Mys"
+    return(
+        <Ex name={value}/>
+    )
+}
+export default SecondApp
