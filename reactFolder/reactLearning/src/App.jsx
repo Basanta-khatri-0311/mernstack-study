@@ -3,6 +3,7 @@
 // }
 
 // import Caard from "./components/Caard";
+import { useState } from "react";
 import Ex from "./components/Ex";
 
 // import { useState } from "react";
@@ -314,10 +315,78 @@ import Ex from "./components/Ex";
 // export default App;
 
 
-const SecondApp = ()=>{
-    const value = "Mys"
-    return(
-        <Ex name={value}/>
-    )
+// const SecondApp = ()=>{
+//     const value = "Mys"
+//     return(
+//         <Ex name={value}/>
+//     )
+// }
+// export default SecondApp
+
+// const FormHandeling = ()=>{
+//     const [username,setUsername] = useState('')
+//     const handeler = (e)=>{
+//         e.preventDefault()
+//         console.log(username)
+//         setUsername('')
+//     }
+//     return(
+//         <div>
+//             <form onSubmit={(e)=>{
+//                     handeler(e)
+//                 }} >
+//                 <input 
+//                 value={username}
+//                 onChange={(e)=>{
+//                     setUsername(e.target.value)
+//                 }}
+//                 type="text" className="m-5 px-4 py-3 rounded" />
+//                 <button className="bg-emerald-700 text-white px-4 py3 m-5 rounded" >Submit</button>
+//             </form>
+//         </div>
+//     )
+// }
+
+// export default FormHandeling
+
+const Componentss = () =>{
+    const usersData = [
+        {
+            username: "JohnDoe",
+            password: "securePass123",
+            profession: "Software Developer"
+        },
+        {
+            username: "JaneSmith",
+            password: "strongPwd456",
+            profession: "Data Scientist"
+        },
+        {
+            username: "MikeJohnson",
+            password: "safeCode789",
+            profession: "UX Designer"
+        },
+        {
+            username: "EmilyBrown",
+            password: "complexPw321",
+            profession: "Project Manager"
+        },
+        {
+            username: "ChrisWilson",
+            password: "toughPass987",
+            profession: "Network Engineer"
+        }
+    ];
+      return(
+        <div className="flex">
+            {usersData.map((data)=>{
+            return(
+                <Ex username = {data.username} password = {data.password} profession ={data.profession} />
+            )
+        })}
+        </div>
+      )
+
 }
-export default SecondApp
+
+export default Componentss
