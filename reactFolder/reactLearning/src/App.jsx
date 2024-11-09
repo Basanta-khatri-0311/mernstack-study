@@ -4,7 +4,7 @@
 
 // import Caard from "./components/Caard";
 import { useState } from "react";
-import Ex from "./components/Ex";
+// import Ex from "./components/Ex";
 
 // import { useState } from "react";
 // import Footer from "./components/Footer"
@@ -349,44 +349,131 @@ import Ex from "./components/Ex";
 
 // export default FormHandeling
 
-const Componentss = () =>{
-    const usersData = [
-        {
-            username: "JohnDoe",
-            password: "securePass123",
-            profession: "Software Developer"
-        },
-        {
-            username: "JaneSmith",
-            password: "strongPwd456",
-            profession: "Data Scientist"
-        },
-        {
-            username: "MikeJohnson",
-            password: "safeCode789",
-            profession: "UX Designer"
-        },
-        {
-            username: "EmilyBrown",
-            password: "complexPw321",
-            profession: "Project Manager"
-        },
-        {
-            username: "ChrisWilson",
-            password: "toughPass987",
-            profession: "Network Engineer"
-        }
-    ];
-      return(
-        <div className="flex">
-            {usersData.map((data)=>{
-            return(
-                <Ex username = {data.username} password = {data.password} profession ={data.profession} />
-            )
-        })}
-        </div>
-      )
+// const Componentss = () =>{
+//     const usersData = [
+//         {
+//             username: "JohnDoe",
+//             password: "securePass123",
+//             profession: "Software Developer"
+//         },
+//         {
+//             username: "JaneSmith",
+//             password: "strongPwd456",
+//             profession: "Data Scientist"
+//         },
+//         {
+//             username: "MikeJohnson",
+//             password: "safeCode789",
+//             profession: "UX Designer"
+//         },
+//         {
+//             username: "EmilyBrown",
+//             password: "complexPw321",
+//             profession: "Project Manager"
+//         },
+//         {
+//             username: "ChrisWilson",
+//             password: "toughPass987",
+//             profession: "Network Engineer"
+//         }
+//     ];
+//       return(
+//         <div className="flex">
+//             {usersData.map((data)=>{
+//             return(
+//                 <Ex username = {data.username} password = {data.password} profession ={data.profession} />
+//             )
+//         })}
+//         </div>
+//       )
 
+// }
+
+// export default Componentss
+
+// import axios from 'axios'
+
+// const App = ()=>{
+
+//     const [data, setData] = useState([])
+//     const getData= async ()=>{
+//         const response = await axios.get('https://picsum.photos/v2/list?page=2&limit=10')
+//         setData(response.data)
+//         console.log(data)
+//     }
+//     return(
+//         <div className="p-10">
+//             <button onClick={getData} className="bg-teal-700 text-white font-semibold text-2xl px-6 py-3 rounded active:scale-90">Get Data</button>
+//             <div className="p-5  bg-gray-950">
+//                 {data.map((value,idx)=>{
+//                     return (
+//                     <div key={idx} className="bg-gray-200 text-black flex items-center justify-between w-full px-7 py-6 rounded mb-3">
+//                         <img className="h-80" src={value.download_url} alt="" />
+//                         <h1>{value.author}</h1>
+//                     </div>
+//                     )
+//                 })}
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default App
+
+import axios from 'axios'
+
+// const GetData = ()=>{
+//     const[images, setImages] = useState([])
+
+//     const getData = async ()=>{
+//         const data = await axios.get('https://picsum.photos/v2/list?page=2&limit=20')
+//         setImages(data.data)
+//     }
+
+//     return(
+//         <div className="p-10">
+//             <button onClick={getData} className="bg-orange-600 p-16 rounded">Get value</button>
+//             <div>
+//                 {images.map((value,idx)=>{
+//                     return(
+//                         <div key={idx}  className="bg-red-400 flex justify-center items-center space-x-6 mb-4">
+//                             <img className="h-80" src={value.download_url} alt="" />
+//                             <h1>{value.author}</h1>
+//                         </div>
+//                     )
+//                 })}
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default GetData
+
+
+const App = ()=>{
+    const [picture,setPicture] = useState([])
+
+    const getData = async ()=>{
+        const images = await axios.get('https://picsum.photos/v2/list?page=2&limit=20')
+        setPicture(images.data)
+    }
+
+    return(
+        <div className="p-10">
+            <button onClick={getData} className="bg-green-700 p-10 rounded active:scale-105">Get Value</button>
+                <div>
+                {picture.map((value,idx)=>{
+                    return(
+                        <div key={idx} className="bg-white">
+                            <img src={value.download_url} alt="" className="h-80" />
+                            <h1>{value.author}</h1>
+
+                    </div>
+                    )
+                })}
+                </div>
+        </div>
+    )
 }
 
-export default Componentss
+export default App;
