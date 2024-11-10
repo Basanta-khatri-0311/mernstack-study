@@ -450,30 +450,30 @@ import axios from 'axios'
 // export default GetData
 
 
-const App = ()=>{
-    const [picture,setPicture] = useState([])
+// const App = ()=>{
+//     const [picture,setPicture] = useState([])
 
-    const getData = async ()=>{
-        const images = await axios.get('https://picsum.photos/v2/list?page=2&limit=20')
-        setPicture(images.data)
-    }
+//     const getData = async ()=>{
+//         const images = await axios.get('https://picsum.photos/v2/list?page=2&limit=20')
+//         setPicture(images.data)
+//     }
 
-    return(
-        <div className="p-10">
-            <button onClick={getData} className="bg-green-700 p-10 rounded active:scale-105">Get Value</button>
-                <div>
-                {picture.map((value,idx)=>{
-                    return(
-                        <div key={idx} className="bg-white">
-                            <img src={value.download_url} alt="" className="h-80" />
-                            <h1>{value.author}</h1>
+//     return(
+//         <div className="p-10">
+//             <button onClick={getData} className="bg-green-700 p-10 rounded active:scale-105">Get Value</button>
+//                 <div>
+//                 {picture.map((value,idx)=>{
+//                     return(
+//                         <div key={idx} className="bg-white">
+//                             <img src={value.download_url} alt="" className="h-80" />
+//                             <h1>{value.author}</h1>
 
-                    </div>
-                    )
-                })}
-                </div>
-        </div>
-    )
-}
+//                     </div>
+//                     )
+//                 })}
+//                 </div>
+//         </div>
+//     )
+// }
 
-export default App;
+// export default App;
