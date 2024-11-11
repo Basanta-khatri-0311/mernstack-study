@@ -3,7 +3,7 @@
 // }
 
 // import Caard from "./components/Caard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import Ex from "./components/Ex";
 
 // import { useState } from "react";
@@ -420,6 +420,7 @@ import { useState } from "react";
 // export default App
 
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
 
 // const GetData = ()=>{
 //     const[images, setImages] = useState([])
@@ -505,36 +506,60 @@ import axios from "axios";
 
 // export default App;
 
-const App = () => {
-  const [pic, setPic] = useState([]);
+// const App = () => {
+//   const [pic, setPic] = useState([]);
 
-  const getPhotu = async () => {
-    const photu = await axios.get("https://picsum.photos/v2/list?page=2&limit=100");
-    setPic(photu.data);
-  };
+//   const getPhotu = async () => {
+//     const photu = await axios.get("https://picsum.photos/v2/list?page=2&limit=100");
+//     setPic(photu.data);
+//   };
 
-  return (
-    <>
-      <div className="p-10">
-        <button
-          className="bg-blue-800 text-white px-6 py-4 rounded"
-          onClick={getPhotu}
-        >
-          Get photos
-        </button>
-      </div>
-      <div className="bg-slate-700 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 auto-rows-auto">
-        {pic.map((image, idx) => {
-          return (
-            <div key={idx} >
-              <img className="max-w-72 " src={image.download_url} alt="" />
-              <h1 className="text-orange-700">check</h1>
-            </div>
-          );
-        })}
-      </div>
-    </>
-  );
-};
+//   useEffect(() => {
+//    getPhotu()
+//   }, [])
+  
 
-export default App;
+//   return (
+//     <>
+//       {/* <div className="p-10">
+//         <button
+//           className="bg-blue-800 text-white px-6 py-4 rounded"
+//           onClick={getPhotu}
+//         >
+//           Get photos
+//         </button>
+//       </div> */}
+//       <div className="bg-slate-700 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 auto-rows-auto">
+//         {pic.map((image, idx) => {
+//           return (
+//             <div key={idx} >
+//               <img className="max-w-72 " src={image.download_url} alt="" />
+//               <h1 className="text-orange-700">check</h1>
+//             </div>
+//           );
+//         })}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default App;
+
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+import Home from "./pages/Home"
+import Headerr from "./components/Headerr";
+const App = ()=>{
+    return(
+        <div>
+            <Headerr/>
+            <Routes>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/contact" element={<Contact />}/>
+                <Route path="/" element={<Home />}/>
+            </Routes>
+        </div>
+    )
+}
+
+export default App
