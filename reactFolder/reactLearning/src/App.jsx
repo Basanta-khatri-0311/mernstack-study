@@ -314,7 +314,6 @@ import { useState } from "react";
 
 // export default App;
 
-
 // const SecondApp = ()=>{
 //     const value = "Mys"
 //     return(
@@ -335,7 +334,7 @@ import { useState } from "react";
 //             <form onSubmit={(e)=>{
 //                     handeler(e)
 //                 }} >
-//                 <input 
+//                 <input
 //                 value={username}
 //                 onChange={(e)=>{
 //                     setUsername(e.target.value)
@@ -420,7 +419,7 @@ import { useState } from "react";
 
 // export default App
 
-import axios from 'axios'
+import axios from "axios";
 
 // const GetData = ()=>{
 //     const[images, setImages] = useState([])
@@ -449,7 +448,6 @@ import axios from 'axios'
 
 // export default GetData
 
-
 // const App = ()=>{
 //     const [picture,setPicture] = useState([])
 
@@ -477,3 +475,32 @@ import axios from 'axios'
 // }
 
 // export default App;
+
+const App = () => {
+  const [pic, setPic] = useState([]);
+  const getPhotos = async () => {
+    const photo = await axios.get(
+      "https://picsum.photos/v2/list?page=2&limit=100"
+    );
+    setPic(photo.data);
+  };
+  return (
+    <>
+      <div className="flex justify-center items-center p-3" onClick={getPhotos}>
+        <button className="bg-lime-600 px-4 py-3 rounded">Get photos</button>
+      </div>
+      <div className="bg-slate-600 grid grid-cols-1 auto-rows-auto gap-2 md:grid-cols-2 lg:grid-cols-4 ">
+      {pic.map((img, idx) => {
+        return (
+          <div key={idx} className="bg-gray-500 space-x-4 flex justify-center items-center">
+            <img className="w-64 h-64 rounded-full hover:scale-105 blur-sm hover:blur-none duration-300" src={img.download_url} alt="" />
+            <h2>{img.author}</h2>
+          </div>
+        );
+      })}
+      </div>
+    </>
+  );
+};
+
+export default App;
