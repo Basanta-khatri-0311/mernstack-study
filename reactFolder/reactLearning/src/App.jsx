@@ -476,28 +476,62 @@ import axios from "axios";
 
 // export default App;
 
+// const App = () => {
+//   const [pic, setPic] = useState([]);
+//   const getPhotos = async () => {
+//     const photo = await axios.get(
+//       "https://picsum.photos/v2/list?page=2&limit=100"
+//     );
+//     setPic(photo.data);
+//   };
+//   return (
+//     <>
+//       <div className="flex justify-center items-center p-3" onClick={getPhotos}>
+//         <button className="bg-lime-600 px-4 py-3 rounded">Get photos</button>
+//       </div>
+//       <div className="bg-slate-600 grid grid-cols-1 auto-rows-auto gap-2 md:grid-cols-2 lg:grid-cols-4 ">
+//       {pic.map((img, idx) => {
+//         return (
+//           <div key={idx} className="bg-gray-500 space-x-4 flex justify-center items-center">
+//             <img className="w-64 h-64 rounded-full hover:scale-105 blur-sm hover:blur-none duration-300" src={img.download_url} alt="" />
+//             <h2>{img.author}</h2>
+//           </div>
+//         );
+//       })}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default App;
+
 const App = () => {
   const [pic, setPic] = useState([]);
-  const getPhotos = async () => {
-    const photo = await axios.get(
-      "https://picsum.photos/v2/list?page=2&limit=100"
-    );
-    setPic(photo.data);
+
+  const getPhotu = async () => {
+    const photu = await axios.get("https://picsum.photos/v2/list?page=2&limit=100");
+    setPic(photu.data);
   };
+
   return (
     <>
-      <div className="flex justify-center items-center p-3" onClick={getPhotos}>
-        <button className="bg-lime-600 px-4 py-3 rounded">Get photos</button>
+      <div className="p-10">
+        <button
+          className="bg-blue-800 text-white px-6 py-4 rounded"
+          onClick={getPhotu}
+        >
+          Get photos
+        </button>
       </div>
-      <div className="bg-slate-600 grid grid-cols-1 auto-rows-auto gap-2 md:grid-cols-2 lg:grid-cols-4 ">
-      {pic.map((img, idx) => {
-        return (
-          <div key={idx} className="bg-gray-500 space-x-4 flex justify-center items-center">
-            <img className="w-64 h-64 rounded-full hover:scale-105 blur-sm hover:blur-none duration-300" src={img.download_url} alt="" />
-            <h2>{img.author}</h2>
-          </div>
-        );
-      })}
+      <div className="bg-slate-700 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 auto-rows-auto">
+        {pic.map((image, idx) => {
+          return (
+            <div key={idx} >
+              <img className="max-w-72 " src={image.download_url} alt="" />
+              <h1 className="text-orange-700">check</h1>
+            </div>
+          );
+        })}
       </div>
     </>
   );
