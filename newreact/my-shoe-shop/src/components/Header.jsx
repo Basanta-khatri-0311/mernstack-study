@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = () => { 
+  
   const [isMenueOpen, setIsMenueOpen] = useState(false);
 
   const toggleHamburger = () => {
@@ -10,9 +11,9 @@ const Header = () => {
 
   return (
     <>
-      <nav className="w-full bg-emerald-700 flex justify-between items-center p-6">
-        <div className="text-4xl"><Link to="/">My-Logo</Link></div>
-
+      <nav className="w-full bg-orange-400 flex justify-between items-center p-6">
+        <div className="text-3xl  P-2"><Link to="/">My</Link></div>
+        
         <div className=" hidden md:flex  text-2xl space-x-12 font-[Poppins] ">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
